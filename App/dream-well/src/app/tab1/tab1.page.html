@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Recent Sleep Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid  class="center-grid">
+
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col><ion-datetime presentation="date"></ion-datetime></ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row><ion-col></ion-col></ion-row> 
+
+    <ion-row>
+      <ion-col></ion-col>
+        <ion-button color="danger">
+          <ion-icon slot="end" name="add-outline"></ion-icon>
+          No Sleep Logged
+        </ion-button>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row><ion-col></ion-col></ion-row> 
+
+
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-button>Bedtime</ion-button>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
