@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-grid  class="center-grid">
 
     <ion-modal [keepContentsMounted]="true">
@@ -14,6 +14,12 @@
         <ion-datetime id="datetime"></ion-datetime>
       </ng-template>
     </ion-modal>
+
+    <ion-row id="header_text">
+      <ion-col>
+        <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
+      </ion-col>
+    </ion-row>
 
     <ion-row>
       <ion-col>

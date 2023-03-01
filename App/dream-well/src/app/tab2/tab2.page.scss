@@ -5,6 +5,19 @@ ion-grid {
         left: 50%;
         transform: translate(-50%, -50%) !important;
         display: block !important;
-        /*width: 100%;*/
+        width: 100%;
     }
+}
+
+ion-card {
+    --background: #8977CE;
+    --color: #FFFFFF;
+}
+
+ion-card-subtitle {
+    --color:#FFFFFF;
+}
+
+#header_text {
+    text-align: center;
 }
