@@ -8,3 +8,19 @@ ion-grid {
         /*width: 100%;*/
     }
 }
+
+
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+ion-card {
+    --background: #8977CE;
+    --color: #FFFFFF;
+  }
+
+
+ion-button {
+    --color: #FFFFFF !important; 
+  }

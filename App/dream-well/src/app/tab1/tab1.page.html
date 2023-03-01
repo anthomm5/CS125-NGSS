@@ -28,17 +28,27 @@
     </ion-row>
 
     <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Sleep Recommendation</ion-card-title>
+          </ion-card-header>        
+          <ion-card-content>
+            Want a recommendation for how much you should sleep tonight? Click 'Bedtime' below.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> 
     <ion-row><ion-col></ion-col></ion-row> 
 
 
     <ion-row>
       <ion-col></ion-col>
-      <ion-button>Bedtime</ion-button>
+      <ion-button>
+        <ion-icon slot="end" name="bed-outline"></ion-icon>
+        Bedtime
+      </ion-button>
       <ion-col></ion-col>
     </ion-row>
   </ion-grid>
