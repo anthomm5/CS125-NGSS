@@ -11,13 +11,21 @@
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
-        <ion-datetime id="datetime"></ion-datetime>
+        <ion-datetime id="datetime1"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime2"></ion-datetime>
       </ng-template>
     </ion-modal>
 
     <ion-row id="header_text">
       <ion-col>
-        <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
+        <ion-text>
+          <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
+        </ion-text>
       </ion-col>
     </ion-row>
 
@@ -28,7 +36,8 @@
             <ion-card-subtitle>Desired Bedtime</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            Select the date and time you would like to fall asleep.
+            <ion-datetime-button class="ion-padding-top" datetime="datetime1"></ion-datetime-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -38,13 +47,26 @@
             <ion-card-subtitle>Desired Waketime</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            Select the date and time you would like to wake up.
+            <ion-datetime-button class="ion-padding-top" datetime="datetime2"></ion-datetime-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row> 
 
-    <ion-row><ion-col></ion-col></ion-row> 
+    <ion-row>
+      <ion-col>
+        <ion-card color="light">
+          <ion-card-header>
+            <ion-card-subtitle>Sleep Duration</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            8 Hours
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> 
     <ion-row><ion-col></ion-col></ion-row> 
     <ion-row><ion-col></ion-col></ion-row> 
     <ion-row><ion-col></ion-col></ion-row> 
