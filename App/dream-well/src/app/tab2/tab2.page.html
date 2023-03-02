@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-grid  class="center-grid">
+  <ion-grid  class="center-grid ion-padding-top" >
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
@@ -33,7 +33,10 @@
       <ion-col>
         <ion-card>
           <ion-card-header>
-            <ion-card-subtitle>Desired Bedtime</ion-card-subtitle>
+            <ion-card-subtitle>
+              Desired Bedtime 
+              <ion-icon name="bed"></ion-icon>
+            </ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
             Select the date and time you would like to fall asleep.
@@ -44,7 +47,10 @@
       <ion-col>
         <ion-card>
           <ion-card-header>
-            <ion-card-subtitle>Desired Waketime</ion-card-subtitle>
+            <ion-card-subtitle>
+              Desired Waketime
+              <ion-icon name="alarm"></ion-icon>
+            </ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
             Select the date and time you would like to wake up.
