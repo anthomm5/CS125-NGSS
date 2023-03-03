@@ -25,7 +25,7 @@ export class Tab1Page implements AfterViewInit{
   }
 
   createSleepScoreLineChart() {
-    let topTenScores = [88.14, 88.09, 87.72, 87.7, 87.69, 87.63, 87.51];
+    let topTenScores = [87.63, 87.72, 88.09, 87.51 , 87.69, 87.7, 88.14];
     let dates_logged = ["S", "M", "T", "W", "T", "F", "S"];
 
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
@@ -47,7 +47,7 @@ export class Tab1Page implements AfterViewInit{
           ]
         }]
       }
-    });
+    }); 
 
     
   }
