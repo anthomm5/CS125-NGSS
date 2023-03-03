@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'chart.js';
+import { Chart } from 'chart.js/auto';
 
 @Component({
   selector: 'app-tab1',
@@ -15,35 +15,41 @@ export class Tab1Page implements AfterViewInit{
   lineChart: any;
 
   ngAfterViewInit() {
-    // initialize data here to be read for graphing
+
+    // Set default colors to chart to all white
+    Chart.defaults.backgroundColor = 'rgb(255, 255, 255)';
+    Chart.defaults.borderColor = 'rgb(255, 255, 255)';
+    Chart.defaults.color = 'rgb(255, 255, 255)';
 
     this.createSleepScoreLineChart();
   }
 
   createSleepScoreLineChart() {
-    let lastFiveLogs = [0,0,0,0,0];
-    let sleepiness_values = [1,2,3,4,5];
-    let dates_logged = [0,0,0,0,0];
-
-    // Put data into arrays
-    //for (let i=0; i < lastFiveLogs.length;i++) {
-    //  sleepiness_values.push(lastFiveLogs[i].getLoggedValue());
-    //  dates_logged.push(lastFiveLogs[i].getDateStringForGraph());
-    //}
+    let topTenScores = [88.14, 88.09, 87.72, 87.7, 87.69, 87.63, 87.51];
+    let dates_logged = ["S", "M", "T", "W", "T", "F", "S"];
 
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: 'line',
       data: {
         labels: dates_logged,
         datasets: [{
-          label: 'Sleepiness Rating',
-          data: sleepiness_values,
+          label: 'Sleep Scores',
+          data: topTenScores,
           fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
+          borderColor: 'rgb(255, 255, 255)',
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ]
         }]
       }
     });
+
+    
   }
 
 }
