@@ -1,1 +1,4 @@
 CS 125: Next Gen Search Systems
+
+cd App\dream_well
+ionic server

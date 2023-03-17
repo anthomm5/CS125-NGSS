@@ -1,66 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Past Sleep Nights
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="header">Bedtime Stats</div>
+  <div class="divider"></div>
+  <div class="button-container">
+    <button [ngClass]="{'active': selectedButton === 'days'}" (click)="selectButton('days')">Days</button>
+    <button class="middle-button" [ngClass]="{'active': selectedButton === 'weeks'}"
+      (click)="selectButton('weeks')">Weeks</button>
+    <button [ngClass]="{'active': selectedButton === 'months'}" (click)="selectButton('months')">Months</button>
+  </div>
+  <div class="divider"></div>
+  
+  <div class="chart-title">Sleep Quality</div>
+  <div class="chart-container">
+    <canvas #qualityChart></canvas>
+  </div>
+  
+  <div class="divider"></div>
 
-<ion-content [fullscreen]="true" class="has-header ion-padding">
+  <div class="chart-title">Sleep Duration</div>
+  <div class="chart-container">
+    <canvas #sleepDuration></canvas>
+  </div>
 
-  <ion-grid class="center-grid">
-
-    <ion-row>
-        <ion-col><ion-datetime presentation="date"></ion-datetime></ion-col>
-    </ion-row>
-
-    <ion-row><ion-col></ion-col></ion-row> 
-
-    <ion-row>
-      <ion-col></ion-col>
-        <ion-button color="danger">
-          <ion-icon slot="end" name="add-outline"></ion-icon>
-          No Sleep Logged
-        </ion-button>
-      <ion-col></ion-col>
-    </ion-row>
-
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row>
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Sleep Recommendation</ion-card-title>
-          </ion-card-header>        
-          <ion-card-content>
-            Want a recommendation for how much you should sleep tonight? Click 'Bedtime' below.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row> 
-    <ion-row>
-      <ion-col>
-        <ion-card >
-          <ion-card-header>
-            <ion-card-title>Past Sleep Quality</ion-card-title>
-            <ion-card-subtitle color="#0000">Week of 02/19/2023</ion-card-subtitle>
-          </ion-card-header>
-          <ion-card-content>
-            <canvas #lineCanvas ></canvas>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row> 
-
-
-    <ion-row>
-      <ion-col></ion-col>
-      <ion-button>
-        <ion-icon slot="end" name="bed-outline"></ion-icon>
-        Bedtime
-      </ion-button>
-      <ion-col></ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="divider"></div>
+  <ion-button class="add-sleep-data-button" expand="block">Add Sleep Data</ion-button>
 
 </ion-content>
