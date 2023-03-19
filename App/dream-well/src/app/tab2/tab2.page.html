@@ -1,13 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Bedtime
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" class="has-header ion-padding" >
-  <ion-grid  class="center-grid ion-padding-top" >
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="header">
+    <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
+  </div>
+  <div class="divider"></div>
+  <ion-grid class="center-grid">
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
@@ -21,20 +17,12 @@
       </ng-template>
     </ion-modal>
 
-    <ion-row id="header_text">
-      <ion-col>
-        <ion-text>
-          <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-
     <ion-row>
       <ion-col>
         <ion-card>
           <ion-card-header>
             <ion-card-subtitle>
-              Desired Bedtime 
+              Desired Bedtime
               <ion-icon name="bed"></ion-icon>
             </ion-card-subtitle>
           </ion-card-header>
@@ -58,7 +46,7 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-    </ion-row> 
+    </ion-row>
 
     <ion-row>
       <ion-col>
@@ -66,23 +54,21 @@
           <ion-card-header>
             <ion-card-subtitle>Sleep Duration</ion-card-subtitle>
           </ion-card-header>
-        
+
           <ion-card-content>
             8 Hours
           </ion-card-content>
         </ion-card>
       </ion-col>
-    </ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    <ion-row><ion-col></ion-col></ion-row> 
-    
+    </ion-row>
+
+
     <ion-row>
       <ion-col></ion-col>
-        <ion-button>
-          <ion-icon slot="end" name="bed-outline"></ion-icon>
-          Get Recommendation
-        </ion-button>
+      <ion-button>
+        <ion-icon slot="end" name="bed-outline"></ion-icon>
+        Get Recommendation
+      </ion-button>
       <ion-col></ion-col>
     </ion-row>
   </ion-grid>
