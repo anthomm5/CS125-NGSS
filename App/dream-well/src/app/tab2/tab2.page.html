@@ -65,11 +65,18 @@
 
     <ion-row>
       <ion-col></ion-col>
-      <ion-button>
+      <ion-button id="rec_button" (click) ="get_sleep_recs()">
         <ion-icon slot="end" name="bed-outline"></ion-icon>
         Get Recommendation
       </ion-button>
       <ion-col></ion-col>
     </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+        <div id="sleep_results" [innerHTML]=""></div>
+      <ion-col></ion-col>
+    </ion-row>
+
   </ion-grid>
 </ion-content>
