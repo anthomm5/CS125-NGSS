@@ -72,10 +72,35 @@
       <ion-col></ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row *ngIf="show_recs">
       <ion-col></ion-col>
-        <div id="sleep_results" [innerHTML]=""></div>
+      <div class="header">
+        <h2>Sleep Recommendation <ion-icon slot="end" name="alarm"></ion-icon></h2>
+      </div>
       <ion-col></ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="show_recs">
+      <ion-col>
+        <ion-card color='light'> 
+          <ion-card-header>
+            <ion-card-title>11:00pm</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>8 Hours of sleep</ion-card-content>
+        </ion-card>
+        <ion-card color='light'> 
+          <ion-card-header>
+            <ion-card-title>11:15pm</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>7.75 Hours of sleep</ion-card-content>
+        </ion-card>
+        <ion-card color='light'> 
+          <ion-card-header>
+            <ion-card-title>11:30pm</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>7.50 Hours of sleep</ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
 
   </ion-grid>

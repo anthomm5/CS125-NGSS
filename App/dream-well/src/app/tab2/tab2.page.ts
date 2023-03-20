@@ -7,18 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
   result_str:String = "Some text";
-  constructor() {}
+  show_recs:boolean = false;
+  constructor() {
+
+  }
 
   get_sleep_recs() {
-    //document.getElementById("sleep_results").innerHTML
+    // Do sleep recomendation algorithm here based on user input of datetime
+    this.show_recs = true;
 
-    document.getElementById("sleep_results")!.innerHTML = 
-    "<ion-card color='light'> \
-      <ion-card-header> \
-        <ion-card-subtitle>Sleep Recommendation</ion-card-subtitle> \
-      </ion-card-header> \
-      <ion-card-content>8 Hours</ion-card-content> \
-    </ion-card>";
   }
 
 }
