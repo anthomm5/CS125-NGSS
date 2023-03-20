@@ -1,9 +1,13 @@
 <ion-content [fullscreen]="true" class="ion-padding">
-  <div class="header">
-    <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
-  </div>
-  <div class="divider"></div>
+
   <ion-grid class="center-grid">
+
+    <ion-row>
+    <div class="header">
+      <h1>Bedtime <ion-icon slot="end" name="moon"></ion-icon></h1>
+    </div>
+    <div class="divider"></div>
+    </ion-row>
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
@@ -55,7 +59,7 @@
             <ion-card-subtitle>Sleep Duration</ion-card-subtitle>
           </ion-card-header>
 
-          <ion-card-content>
+          <ion-card-content id="sleep_hours_input">
             8 Hours
           </ion-card-content>
         </ion-card>
@@ -74,6 +78,7 @@
 
     <ion-row *ngIf="show_recs">
       <ion-col></ion-col>
+      <div class="divider"></div>
       <div class="header">
         <h2>Sleep Recommendation <ion-icon slot="end" name="alarm"></ion-icon></h2>
       </div>
