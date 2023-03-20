@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -6,16 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  result_str:String = "Some text";
-  show_recs:boolean = false;
-  constructor() {
+  result_str: string = "Some text";
+  show_recs: boolean = false;
 
+  constructor(private router: Router) {}
+
+  onGetRecommendationClick() {
+    // Navigate to the recommendation page
+    this.router.navigate(['/tabs/tab4']);
   }
-
-  get_sleep_recs() {
-    // Do sleep recomendation algorithm here based on user input of datetime
-    this.show_recs = true;
-
-  }
-
 }
